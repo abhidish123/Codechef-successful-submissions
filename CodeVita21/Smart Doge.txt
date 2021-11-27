@@ -1,0 +1,59 @@
+#pragma GCC optimize "trapv"
+#include<bits/stdc++.h>
+#define int long long
+#define pb push_back
+#define ppb pop_back
+#define ff first
+#define ss second
+#define sz(s) (int)(s.size())
+#define all(a) (a).begin(),(a).end()
+#define pii pair<int,int>
+#define deb(x) cout << #x << " = " << x << endl
+#define endl '\n'
+#define M 1000000007
+const int INF = 1ll << 60;
+using namespace std;
+
+
+void solve() {
+
+	int n, k;
+	cin >> n >> k;
+	if (k == 1) {
+		cout << "0\n";
+	}
+	else if (k == 2) {
+		cout << n % k << endl;
+	}
+	else {
+
+		int d = ceil(n / 2) - 1;
+		if (d <= k) {
+			cout << d << "\n";
+		}
+		else {
+			/*
+			// find n % x = max(remainder)
+			// n = 11, x = ?, k = 4
+
+			-- []  = 11, 11/2, 11/3, 11/4, 11/5, 11/6, ........
+			-- rem = 0,  1,    2,    3,    1,    5,   4 , 3 , 2 , 1, ....
+
+			-- 11, 5,    3,    2,    2,    1
+
+			*/
+
+			cout << n % k << endl;
+		}
+	}
+}
+
+signed main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	int t = 1;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+}

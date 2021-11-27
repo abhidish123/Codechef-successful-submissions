@@ -1,0 +1,46 @@
+#pragma GCC optimize "trapv"
+#include<bits/stdc++.h>
+#define int long long
+#define pb push_back
+#define ppb pop_back
+#define ff first
+#define ss second
+#define sz(s) (int)(s.size())
+#define all(a) (a).begin(),(a).end()
+#define pii pair<int,int>
+#define deb(x) cout << #x << " = " << x << endl
+#define endl '\n'
+#define M 1000000007
+const int INF = 1ll << 60;
+using namespace std;
+
+
+void solve() {
+
+	int n;
+	cin >> n;
+	map<int, int> mp;
+
+	int x;
+	while (cin >> x) {
+		if (!cin) break;
+		mp[x]++;
+	}
+
+	for (auto &x : mp) {
+		if (x.ss == 1) {
+			cout << x.ff << endl;
+			break;
+		}
+	}
+}
+
+signed main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	int t = 1;
+	// cin >> t;
+	while (t--) {
+		solve();
+	}
+}
